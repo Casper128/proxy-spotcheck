@@ -1,0 +1,17 @@
+{
+  "name": "spotcheck-review-proxy",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test *.test.mjs",
+    "build": "node --check server.mjs && node --check rewrite.mjs && node --check security.mjs && node --check public/spotcheck-inspector.js"
+  },
+  "dependencies": {
+    "ipaddr.js": "2.2.0",
+    "parse5": "7.3.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
